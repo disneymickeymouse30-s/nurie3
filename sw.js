@@ -1,6 +1,6 @@
-// Coloria service worker：アプリ本体をキャッシュし、オフラインでも開けるようにする
+// Sakichi Nurie service worker：アプリ本体をキャッシュし、オフラインでも開けるようにする
 // （作品データは IndexedDB にあるので、ネットが切れても塗り続けられる）
-const CACHE = 'coloria-v1';
+const CACHE = 'coloria-v2';
 
 self.addEventListener('install', (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(['./', './index.html', './manifest.webmanifest', './icon.svg'])).then(() => self.skipWaiting()));
